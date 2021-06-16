@@ -1,7 +1,7 @@
 import '../styles/globals.css'
-
-function MyApp({ Component, pageProps }) {
+import '/node_modules/bootstrap/dist/css/bootstrap.css'
+function Puma({ Component, pageProps }) {
   return <Component {...pageProps} />
 }
 
-export default MyApp
+export default Puma
