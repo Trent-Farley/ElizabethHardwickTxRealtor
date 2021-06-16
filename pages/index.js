@@ -13,7 +13,7 @@ export default function Home() {
       </Head>
       <main className="container">
       <div className="row pt-lg-4">
-        <div className = "col-sm-3 shadow-lg bg-dark">
+        <div className = "col-sm-3 shadow-lg pt-3 bg-dark">
           <Card className={styles.main, "shadow-lg", "p-3"}>
             <div className={"card-img"}>
               <Image height="200%" width="200%" src="/images/main_photo.jpg" alt="Elizabeth Hardwick"/>
