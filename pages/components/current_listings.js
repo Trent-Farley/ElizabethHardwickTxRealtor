@@ -1,7 +1,7 @@
 import { Card , Button, Jumbotron, ButtonGroup} from "react-bootstrap";
 import { Image } from "react-bootstrap";
 import { useEffect, useState } from 'react'
-import { server } from "../../config";
+import { get_listings } from "../../config";
 import fetch from "node-fetch";
 
 let STARTING_SCHEMA ={
@@ -41,7 +41,7 @@ export default function Listings(){
 }
 async function getAPI(changeState){
     try{
-        let req = await fetch(server+"/api/get_listings");
+        let req = await fetch(get_listings);
         let res = await req.json();
         console.log(res);
         changeState({info: res.info});
