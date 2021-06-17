@@ -1,14 +1,12 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import { MainInfo } from './components/main_info'
+import  MainInfo  from './components/main_info'
 import { Navbar } from 'react-bootstrap'
-import { useState } from 'react'
-import { server } from '../config'
+import  Listings  from './components/current_listings'
+import fetch from 'node-fetch'
+
 export default function Home() {
-  let [state, changeState] = useState({info:0});
-  if(state.info == 0){
-    getAPI(changeState);
-  }
+
   return (
     <div className={styles.container}>
       <Head>
@@ -19,20 +17,14 @@ export default function Home() {
       <Navbar bg='dark' expand="dark"/>
       <main className="container">
       <MainInfo />
-
-        <p>
-          {state.info}
-        </p>
+      <h4 className="text-center">
+        Listings
+      </h4>
+      <Listings/>
 
       <footer>
         <div className="card-footer w-100">
           Located at: <strong>123 Address St. NE</strong>
-          
-          <p>
-            Next Steps:
-            Data from Zillow (Hopefully) on what the team currently has for sale, this will show 
-            all of the properties/feature.
-         </p>
         </div>
       </footer>
       </main>
@@ -41,8 +33,3 @@ export default function Home() {
   )
 }
 
-async function getAPI(changeState){
-  let req = await fetch(server+"/api/get_listings");
-  let res = await req.json();
-  changeState({info: res.hello.toString()});
-} 

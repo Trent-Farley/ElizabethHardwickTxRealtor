@@ -1,15 +1,15 @@
 
 import { Card , Button, Jumbotron, ButtonGroup} from "react-bootstrap";
-import Image from 'next/image'
+import { Image } from "react-bootstrap";
 
-export function MainInfo(){
+export default function MainInfo(){
     return (
         <div>
             <div className="row pt-lg-4 pb-lg-5">
                 <div className = "col-sm-4 shadow-lg pt-3 bg-dark">
                     <Card className=" bg-dark">
                         <div className={"card-img bg-transparent w-100 h-100"}>
-                            <Image height="200%" width="auto"  src="/images/main_photo.jpg" alt="Elizabeth Hardwick"/>
+                            <Image width="auto"  src="/images/main_photo.jpg" alt="Elizabeth Hardwick"/>
                         </div>
                         <div className="card-footer">
                             <ButtonGroup className="d-flex">
