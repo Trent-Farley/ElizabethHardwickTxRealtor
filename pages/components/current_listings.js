@@ -17,7 +17,7 @@ export default function Listings(){
 
     return(
         <>
-        {typeof state.listing.title !== 'undefined' && state.listing.title !== ""? 
+        {typeof state.listing !== 'undefined'? 
             <CustomModal
             title={state.listing.title}
             imgs={state.listing.imgs}
