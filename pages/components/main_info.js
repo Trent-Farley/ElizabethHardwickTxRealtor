@@ -7,15 +7,13 @@ export default function MainInfo(){
         <div>
             <div className="row pt-lg-4 pb-lg-5">
                 <div className = "col-sm-4 shadow-lg pt-3 bg-dark">
-                    <Card className=" bg-dark">
-                        <div className={"card-img bg-transparent w-100 h-100"}>
-                            <Image width="auto"  src="/images/main_photo.jpg" alt="Elizabeth Hardwick"/>
-                        </div>
+                    <Card className="bg-dark">
+                        <Image className="" width="auto" height="275px" src="/images/main_photo.jpg" alt="Elizabeth Hardwick"/>
                         <div className="card-footer">
                             <ButtonGroup className="d-flex">
-                                <Button className="w-100" size='lg' variant="outline-primary"><i className="fa fa-facebook"></i></Button>
-                                <Button className="w-100" size='lg' variant="outline-success"><i className="fa fa-twitter"></i></Button>
-                                <Button className="w-100" size='lg' variant="outline-light"><i className="fa fa-phone"></i></Button>
+                                <a className="btn btn-outline-light w-100 btn-lg" title="Link to phone number" href="tel:469-850-2170"><i className="fa fa-phone"></i></a>
+                                <a className="btn btn-outline-success w-100 btn-lg" title="link to email" href="mailto:elizabeth@tomorrowsrealty.com" target="_blank" rel="noreferrer"><i className="fa fa-envelope"> </i></a>
+                                <a className="btn btn-outline-primary w-100 btn-lg" title="link to Facebook" target="_blank" rel="noreferrer" href="https://www.facebook.com/hardwick4"><i className="fa fa-facebook"></i></a>
                             </ButtonGroup>
                         </div>
                     </Card>

@@ -1,4 +1,5 @@
 import fetch from "node-fetch";
+import ApiSchema from "../../models/ApiSchema";
 export default async function handler(req, res){
     try{
       let results = processInfo();
@@ -8,43 +9,10 @@ export default async function handler(req, res){
       return res.status(500).json({error: e});
     }
 }
-let PARAMS = {
-    "count": 240,
-    "offset": 0,
-    "sorts": {
-        "0": {
-            "listingContractDate": "desc"
-        }
-    },
-    "terms": {
-        "locationRect": {
-            "minLat": 31.51298818853606,
-            "maxLat": 33.71780518340581,
-            "minLon": -98.64546854394531,
-            "maxLon": -95.28365213769531
-        },
-        "teams": [
-            "101918147"
-        ],
-        "bPropertyType": "For Sale",
-        "freeSearch": true,
-        "place": {
-            "lat": 33.11449,
-            "lon": -96.672736,
-            "city": "Allen",
-            "state": "TX",
-            "placename": "Allen, TX",
-            "placeType": "city",
-            "placeId": "4801924"
-        }
-    },
-    "listingLoadLevel": "Search"
-  }
-
 async function processInfo(){
   let req = await fetch("https://public-api-gateway-prod.kube.remax.booj.io/listings/search/run/",{
     method: 'POST',
-    body: JSON.stringify(PARAMS),
+    body: JSON.stringify(ApiSchema),
     headers: {'Content-Type': 'application/json'}
   });
   let results = [];
