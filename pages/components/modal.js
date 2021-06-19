@@ -69,6 +69,11 @@ export default function CustomModal({title, imgs, remarks, price, city, rooms, l
                         </Card.Body>
                     </Card>
                 </Modal.Body>
+                <Modal.Footer>
+                    <h6>
+                        Contact me to view this property today!
+                    </h6>
+                </Modal.Footer>
             </Modal >
         )
     } else {

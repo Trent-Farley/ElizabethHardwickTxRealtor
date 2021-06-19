@@ -8,7 +8,7 @@ export default function MainInfo(){
             <div className="row pt-lg-4 pb-lg-5">
                 <div className = "col-sm-4 shadow-lg pt-3 bg-dark">
                     <Card className="bg-dark">
-                        <Image className="" width="auto" height="275px" src="/images/main_photo.jpg" alt="Elizabeth Hardwick"/>
+                        <Image className="" src="/images/main_photo.jpg" alt="Elizabeth Hardwick"/>
                         <div className="card-footer">
                             <ButtonGroup className="d-flex">
                                 <a className="btn btn-outline-light w-100 btn-lg" title="Link to phone number" href="tel:469-850-2170"><i className="fa fa-phone"></i></a>
