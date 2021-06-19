@@ -17,7 +17,7 @@ export default function Listings(){
 
     return(
         <>
-        {typeof state.listing !== 'undefined'? 
+        {typeof state.listing.title !== 'undefined' && state.listing.title !== ""? 
             <CustomModal
             title={state.listing.title}
             imgs={state.listing.imgs}
@@ -40,7 +40,7 @@ export default function Listings(){
                 if(state.info.length> 1){
                     return(
                         <Card key={i}>
-                            {e.imgs.length > 1 ?
+                            {typeof e.imgs !== 'undefined' ?
                             <Image src={`${e.imgs[0]}`} layout="fill" className='card-img-top'  alt="Photo of house"/> 
                             : <p></p>
                             }
