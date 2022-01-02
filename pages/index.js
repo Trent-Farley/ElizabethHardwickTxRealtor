@@ -18,7 +18,8 @@ export default function Home() {
         <Script strategy="beforeInteractive"> 
           {`
             window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
+            window.gtag = () => {dataLayer.push(arguments);}
+            
             gtag('js', new Date());
 
             gtag('config', 'AW-10821860041');
