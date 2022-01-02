@@ -7,18 +7,12 @@ import '/node_modules/font-awesome/css/font-awesome.css'
 export default function Home() {
   return (
       <div className={styles.container}>
-
-       
-       
         <Head>
           <title>Home</title>
           <meta name="description" content="Find your next home with Elizabeth Hardwick. Get information about current homes on the market as well as contact information to get in touch with Elizabeth. " />
           <link rel="icon" href="/favicon.ico" />
-         
-        </Head>
-        <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-10821860041"  strategy="beforeInteractive"/>
-
-        <Script strategy="beforeInteractive">
+          <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-10821860041"  strategy="beforeInteractive"/>
+          <Script strategy="beforeInteractive">
             {`
               window.dataLayer = window.dataLayer || [];
               function gtag() {dataLayer.push(arguments);}
@@ -29,9 +23,13 @@ export default function Home() {
               });
             `}
           </Script>
+        </Head>
+
+       
         <Main/>
         <Script strategy="afterInteractive">
           {`
+            window.dataLayer = window.dataLayer || [];
             function gtag() {dataLayer.push(arguments);}
             window.addEventListener('load', function(){
               if(window.location.pathname == '/'){
