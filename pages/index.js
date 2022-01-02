@@ -18,7 +18,7 @@ export default function Home() {
         <Script strategy="beforeInteractive"> 
           {`
             window.dataLayer = window.dataLayer || [];
-            window.gtag = () => {dataLayer.push(arguments);}
+            gtag = () => {dataLayer.push(arguments);}
             
             gtag('js', new Date());
 
@@ -32,6 +32,7 @@ export default function Home() {
         <Main/>
         <Script strategy="afterInteractive">
           {`
+            gtag = () => {window.dataLayer.push(arguments);}
             window.addEventListener('load', function(){
               if(window.location.pathname == '/'){
                 gtag('event', 'conversion', {'send_to': 'AW-10821860041/Iq-pCKvH6YwDEMn1oago'});
