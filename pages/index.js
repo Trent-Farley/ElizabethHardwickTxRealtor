@@ -14,20 +14,20 @@ export default function Home() {
           <title>Home</title>
           <meta name="description" content="Find your next home with Elizabeth Hardwick. Get information about current homes on the market as well as contact information to get in touch with Elizabeth. " />
           <link rel="icon" href="/favicon.ico" />
-          <Script async strategy="beforeInteractive" src="https://www.googletagmanager.com/gtag/js?id=AW-10821860041"/>
-        <Script strategy="beforeInteractive"> 
-          {`
-            window.dataLayer = window.dataLayer || [];
-            gtag = () => {dataLayer.push(arguments);}
-            
-            gtag('js', new Date());
+          <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10821860041" />
+          <script>
+            {`
+              window.dataLayer = window.dataLayer || [];
+              gtag = () => {dataLayer.push(arguments);}
 
-            gtag('config', 'AW-10821860041');
-            gtag('config', 'AW-10821860041/QqIaCIj4ko0DEMn1oago', {
-              'phone_conversion_number': '(469) 850-2170'
-            });
-          `}
-        </Script>
+              gtag('js', new Date());
+
+              gtag('config', 'AW-10821860041');
+              gtag('config', 'AW-10821860041/QqIaCIj4ko0DEMn1oago', {
+                'phone_conversion_number': '(469) 850-2170'
+              });
+            `}
+          </script>
         </Head>
         <Main/>
         <Script strategy="afterInteractive">
