@@ -32,6 +32,7 @@ export default function Home() {
         <Main/>
         <Script strategy="afterInteractive">
           {`
+            function gtag() {dataLayer.push(arguments);}
             window.addEventListener('load', function(){
               if(window.location.pathname == '/'){
                 gtag('event', 'conversion', {'send_to': 'AW-10821860041/Iq-pCKvH6YwDEMn1oago'});
