@@ -10,8 +10,8 @@ export default function Menu(){
           <title>Home</title>
           <meta name="description" content="Find your next home with Elizabeth Hardwick. Get information about current homes on the market as well as contact information to get in touch with Elizabeth. " />
           <link rel="icon" href="/favicon.ico" />
-          <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-10821860041"  strategy="beforeInteractive"/>
-          <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-10821860041" strategy="beforeInteractive"/>
+          <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10821860041"  />
+          <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10821860041" />
           <Script strategy="beforeInteractive">
             {`
               window.dataLayer = window.dataLayer || [];
